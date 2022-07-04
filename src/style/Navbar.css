@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 4em;
+  font-size: 24px;
+}
+
+.navbar img {
+  width: 200px;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links li {
+  margin-left: 2em;
+}
+
+.links li a {
+  color: #ff6060;
+}
+
+.links li a:hover {
+  text-decoration: underline;
+}

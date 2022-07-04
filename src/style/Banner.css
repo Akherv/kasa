@@ -1,0 +1,16 @@
+.banner {
+  height: 223px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.3) url(../assets/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 48px;
+  color: #fff;
+}
