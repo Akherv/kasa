@@ -1,0 +1,53 @@
+.locations {
+  padding: 2em 4em;
+}
+
+.carrousel {
+  width: 100%;
+  border-radius: 25px;
+}
+.informations_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.informations {
+  width: 50%;
+}
+
+.informations_1 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.5em 2em;
+  border-radius: 40px;
+  background-color: #ff6060;
+  color: #fff;
+  margin-right: 1em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.informations_2 {
+  text-align: right;
+}
+
+.host {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.host img {
+  width: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 0.5em;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+}

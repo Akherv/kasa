@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import Location from "./pages/Location";
+import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -10,20 +11,13 @@ export default function App() {
 
   //fetch location
   useEffect(() => {
-    const myHeaders = new Headers();
-    const myInit = {
-      method: "GET",
-      headers: myHeaders,
-      mode: "cors",
-      cache: "default",
-    };
-    const url = "../public/datas.json";
+    const url = "./datas/locations.json";
     const fetchData = async () => {
       try {
-        const res = await fetch(url, myInit);
-        console.log(res);
+        const res = await fetch(url);
         const datas = await res.json();
         setLocations(datas);
+        console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -36,9 +30,13 @@ export default function App() {
       <>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home locations={locations} />} />
           <Route path="/a_propos" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="/locations/:id"
+            element={<Location locations={locations} />}
+          />
+          <Route path="*" element={<Error />} />
         </Routes>
       </>
     </Router>

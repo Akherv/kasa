@@ -6,13 +6,16 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <img src={logo} alt="logo Kasa" />
+        <Link to="/">
+          {" "}
+          <img src={logo} alt="logo Kasa" />
+        </Link>
         <ul className="links">
           <li>
             <Link to="/">Accueil</Link>
           </li>
           <li>
-            <Link to="/about">A Propos</Link>
+            <Link to="/a_propos">A Propos</Link>
           </li>
         </ul>
       </nav>

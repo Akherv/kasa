@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
 import "../style/Thumb.css";
 
-function Thumb() {
+function Thumb({ id, title, cover }) {
   return (
-    <div className="thumb">
-      <h2>Titre de la location</h2>
-    </div>
+    <Link to={`/locations/${id}`}>
+      <div className="thumb">
+        <h2>{title}</h2>
+        <img className="cover" src={cover} alt={title} />
+      </div>
+    </Link>
   );
 }
 export default Thumb;
