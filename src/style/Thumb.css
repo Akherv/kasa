@@ -28,6 +28,10 @@
   z-index: 1;
 }
 
+.thumb a {
+  height: 100%;
+}
+
 .thumb h2 {
   margin: 1em;
   word-wrap: break-word;

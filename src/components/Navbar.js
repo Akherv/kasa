@@ -7,7 +7,6 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/">
-          {" "}
           <img src={logo} alt="logo Kasa" />
         </Link>
         <ul className="links">

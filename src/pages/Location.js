@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import starRate from "../assets/star_rate.svg";
 import starRateActive from "../assets/star_rate_active.svg";
+import Carrousel from "../components/Carrousel";
+import Dropdown from "../components/Dropdown";
 import "../style/Location.css";
 
 function Location({ locations }) {
@@ -33,7 +35,7 @@ function Location({ locations }) {
           .filter((location) => location.id === id)
           .map((el, idx) => (
             <div key={idx}>
-              <img className="carrousel" src={el.cover} alt={el.title} />
+              <Carrousel {...el} />
               <div className="informations_container">
                 <div className="informations informations_1">
                   <h1>{el.title}</h1>
@@ -54,6 +56,10 @@ function Location({ locations }) {
                   </div>
                   {<ul className="rating">{renderStar(`${el.rating}`)}</ul>}
                 </div>
+              </div>
+              <div className="dropdown_container">
+                <Dropdown element={el.description} type={"description"} />
+                <Dropdown element={el.equipments} type={"equipments"} />
               </div>
             </div>
           ))}

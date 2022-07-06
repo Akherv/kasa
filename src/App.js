@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Location from "./pages/Location";
 import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [locations, setLocations] = useState();
@@ -17,7 +18,7 @@ export default function App() {
         const res = await fetch(url);
         const datas = await res.json();
         setLocations(datas);
-        console.log(datas);
+        //console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -38,6 +39,7 @@ export default function App() {
           />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </>
     </Router>
   );

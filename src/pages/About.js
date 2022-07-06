@@ -1,7 +1,12 @@
+import Dropdown from "../components/Dropdown";
+import Banner from "../components/Banner";
+import "../style/About.css";
+
 function About() {
   return (
-    <div className="">
-      <h1>A Propos</h1>
+    <div className="about">
+      <Banner type={"hero_about"} />
+      <Dropdown />
     </div>
   );
 }

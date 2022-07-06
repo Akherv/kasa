@@ -1,0 +1,13 @@
+.footer {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+}
+
+.footer img {
+  width: 122px;
+}

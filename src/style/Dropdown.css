@@ -1,0 +1,39 @@
+.dropdown {
+  width: 45%;
+}
+.dropdown_button {
+  padding: 1em;
+  background-color: #ff6060;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.arrow {
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.dropdown_content {
+  min-height: 250px;
+  padding: 1em;
+  background-color: #f6f6f6;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 0.3s ease-in;
+  position: relative;
+  top: -5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown_content.active {
+  opacity: 1;
+  transform: translateY(0px);
+}

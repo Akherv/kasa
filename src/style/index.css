@@ -17,8 +17,8 @@ body {
 }
 
 a {
-  height: 100%;
   text-decoration: none;
+  color: #ff6060;
 }
 
 ul {

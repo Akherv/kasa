@@ -1,1 +1,10 @@
+.carrousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+.carrousel img {
+  width: 100%;
+  max-width: 1240px;
+}
