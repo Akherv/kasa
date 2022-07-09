@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import starRate from "../assets/star_rate.svg";
 import starRateActive from "../assets/star_rate_active.svg";
@@ -34,7 +35,7 @@ function Location({ locations }) {
         locations
           .filter((location) => location.id === id)
           .map((el, idx) => (
-            <div key={idx}>
+            <React.Fragment key={idx}>
               <Carrousel {...el} />
               <div className="informations_container">
                 <div className="informations informations_1">
@@ -51,17 +52,27 @@ function Location({ locations }) {
                 </div>
                 <div className="informations informations_2">
                   <div className="host">
-                    <p>{el.host.name}</p>
+                    <p>
+                      {el.host.name.split(" ")[0]}
+                      <br />
+                      {el.host.name.split(" ")[1]}
+                    </p>
                     <img src={el.host.picture} alt={el.host.name} />
                   </div>
                   {<ul className="rating">{renderStar(`${el.rating}`)}</ul>}
                 </div>
               </div>
               <div className="dropdown_container">
-                <Dropdown element={el.description} type={"description"} />
-                <Dropdown element={el.equipments} type={"equipments"} />
+                <Dropdown title={"Description"} size="medium">
+                  {el.description}
+                </Dropdown>
+                <Dropdown title={"Équipements"} size="medium">
+                  {el.equipments.map((el, idx) => (
+                    <li key={idx}>{el}</li>
+                  ))}
+                </Dropdown>
               </div>
-            </div>
+            </React.Fragment>
           ))}
     </div>
   );

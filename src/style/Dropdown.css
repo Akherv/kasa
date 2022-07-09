@@ -1,5 +1,9 @@
 .dropdown {
+  margin: 2em 0;
   width: 45%;
+}
+.dropdown.large {
+  width: 80%;
 }
 .dropdown_button {
   padding: 1em;
@@ -21,19 +25,20 @@
 }
 
 .dropdown_content {
-  min-height: 250px;
-  padding: 1em;
+  padding: 1.5em 1em;
   background-color: #f6f6f6;
+  display: none;
   opacity: 0;
-  transform: translateY(-100px);
   transition: 0.3s ease-in;
   position: relative;
   top: -5px;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .dropdown_content.active {
+  display: block;
+  /* min-height: 250px; */
   opacity: 1;
   transform: translateY(0px);
 }

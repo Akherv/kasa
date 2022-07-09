@@ -24,3 +24,7 @@
 .links li a:hover {
   text-decoration: underline;
 }
+
+.links_active {
+  text-decoration: underline;
+}

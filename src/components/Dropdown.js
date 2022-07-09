@@ -2,17 +2,21 @@ import { useState } from "react";
 import "../style/Dropdown.css";
 import arrow from "../assets/arrow.svg";
 
-function Dropdown({ element, type }) {
+function Dropdown(props) {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="dropdown">
+    <div
+      className={
+        props.size === "medium"
+          ? "dropdown"
+          : props.size === "large"
+          ? "dropdown large"
+          : "dropdown"
+      }
+    >
       <div className="dropdown_button" onClick={() => setActive(!active)}>
-        {type === "description"
-          ? "Description"
-          : type === "Equipments"
-          ? "Équipements"
-          : ""}
+        {props.title}
         <img
           className={!active ? "arrow" : "arrow active"}
           src={arrow}
@@ -20,11 +24,7 @@ function Dropdown({ element, type }) {
         />
       </div>
       <div className={!active ? "dropdown_content" : "dropdown_content active"}>
-        {type === "description"
-          ? element
-          : type === "Equipments"
-          ? element.map((el, idx) => <li key={idx}>{el}</li>)
-          : ""}
+        {props.children}
       </div>
     </div>
   );

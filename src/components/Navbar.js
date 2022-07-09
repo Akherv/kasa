@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import "../style/Navbar.css";
 
 function Navbar() {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <>
       <nav className="navbar">
@@ -10,10 +12,12 @@ function Navbar() {
           <img src={logo} alt="logo Kasa" />
         </Link>
         <ul className="links">
-          <li>
+          <li className={location.pathname === "/" ? "links_active" : ""}>
             <Link to="/">Accueil</Link>
           </li>
-          <li>
+          <li
+            className={location.pathname === "/a_propos" ? "links_active" : ""}
+          >
             <Link to="/a_propos">A Propos</Link>
           </li>
         </ul>

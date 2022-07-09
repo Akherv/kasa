@@ -1,10 +1,47 @@
 .carrousel {
   width: 100%;
+  max-width: 1240px;
+  height: 415px;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.carrousel img {
+.carrousel_arrow {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carrousel_arrow.left {
+  left: 10px;
+}
+
+.carrousel_arrow.left.off {
+  display: none;
+}
+
+.carrousel_arrow.right {
+  right: 10px;
+}
+
+.carrousel_arrow.right.off {
+  display: none;
+}
+
+.carrousel_picture {
+  position: absolute;
+  width: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.carrousel_picture.active {
   width: 100%;
-  max-width: 1240px;
+  height: 100%;
+  object-fit: cover;
 }

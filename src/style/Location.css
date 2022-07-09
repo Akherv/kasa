@@ -1,5 +1,9 @@
 .locations {
+  width: 100%;
   padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carrousel {
@@ -8,6 +12,7 @@
 }
 .informations_container {
   width: 100%;
+  max-width: 1240px;
   display: flex;
   justify-content: space-between;
 }
@@ -38,10 +43,12 @@
 .host {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1.5em;
 }
 
 .host img {
   width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 0.5em;
@@ -53,6 +60,8 @@
 }
 
 .dropdown_container {
+  width: 100%;
+  max-width: 1240px;
   display: flex;
   justify-content: space-between;
 }

@@ -1,9 +1,11 @@
 import "../style/Banner.css";
 
-function Banner({ type }) {
+function Banner(props) {
   return (
-    <div className={type === "hero" ? "banner hero" : "banner hero_about"}>
-      <h1>Chez vous, partout et ailleurs</h1>
+    <div
+      className={props.type === "hero" ? "banner hero" : "banner hero_about"}
+    >
+      <h1>{props.children}</h1>
     </div>
   );
 }
