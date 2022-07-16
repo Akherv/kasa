@@ -5,7 +5,6 @@ import "../style/Carrousel.css";
 
 function Carrousel({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(pictures.length);
 
   const handleIncrease = () => {
     currentIndex < pictures.length - 1

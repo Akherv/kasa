@@ -14,7 +14,7 @@
 }
 
 .message h1 {
-  font-size: 288px;
+  font-size: 13rem;
   margin: 0;
 }
 
@@ -24,4 +24,10 @@
 
 .error a {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 980px) {
+  .error {
+    font-size: 1rem;
+  }
 }

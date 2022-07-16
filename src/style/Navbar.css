@@ -1,19 +1,22 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 2em 4em;
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 
 .navbar img {
   width: 200px;
+  margin-right: 2em;
 }
 
 .links {
   display: flex;
 }
 
-.links li {
+.links li:nth-child(2) {
   margin-left: 2em;
 }
 
@@ -27,4 +30,26 @@
 
 .links_active {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 980px) {
+  .navbar {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar img {
+    width: 145px;
+    margin-right: 1em;
+  }
+  .navbar {
+    padding: 2em 1em 0.5em;
+  }
+  .links {
+    font-size: 1rem;
+  }
+  .links li:nth-child(2) {
+    margin-left: 0.8em;
+  }
 }

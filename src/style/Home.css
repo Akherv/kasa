@@ -9,7 +9,33 @@
   background-color: #e5e5e5;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  grid-gap: 40px;
-  grid-auto-flow: dense;
+  grid-gap: 1.8em;
   justify-items: center;
+}
+
+.board a {
+  width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  .home {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .board {
+    background-color: #fff;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 1em;
+  }
+
+  .board {
+    grid-template-columns: auto;
+  }
 }

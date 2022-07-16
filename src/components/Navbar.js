@@ -4,7 +4,7 @@ import "../style/Navbar.css";
 
 function Navbar() {
   const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <>
       <nav className="navbar">

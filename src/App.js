@@ -1,5 +1,10 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import locations from "./datas/locations.json";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Location from "./pages/Location";
@@ -8,24 +13,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [locations, setLocations] = useState();
-
-  //fetch location
-  useEffect(() => {
-    const url = "./datas/locations.json";
-    const fetchData = async () => {
-      try {
-        const res = await fetch(url);
-        const datas = await res.json();
-        setLocations(datas);
-        //console.log(datas);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
-
   return (
     <Router>
       <>
@@ -37,7 +24,8 @@ export default function App() {
             path="/locations/:id"
             element={<Location locations={locations} />}
           />
-          <Route path="*" element={<Error />} />
+          <Route path="notFound" element={<Error />} />
+          <Route path="*" element={<Navigate to="/notFound" replace />} />
         </Routes>
         <Footer />
       </>
