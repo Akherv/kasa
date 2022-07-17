@@ -43,6 +43,11 @@ function Carrousel({ pictures, title }) {
             alt={title}
           />
         ))}
+      <div className="page">
+        <span>
+          {currentIndex + 1}/{pictures.length}
+        </span>
+      </div>
       <img
         src={arrowRight}
         className={

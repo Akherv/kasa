@@ -3,7 +3,8 @@
 }
 
 .board {
-  margin-top: 2em;
+  max-width: calc(1240px - 2em);
+  margin: 2em auto;
   padding: 2em;
   border-radius: 25px;
   background-color: #e5e5e5;
@@ -17,16 +18,15 @@
   width: 100%;
 }
 
-@media screen and (max-width: 980px) {
-  .home {
-    padding: 2em;
+@media screen and (max-width: 1441px) {
+  .board {
+    max-width: unset;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .board {
-    background-color: #fff;
-    padding: 0;
+@media screen and (max-width: 980px) {
+  .home {
+    padding: 2em;
   }
 }
 
@@ -37,5 +37,12 @@
 
   .board {
     grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .board {
+    background-color: #fff;
+    padding: 0;
   }
 }

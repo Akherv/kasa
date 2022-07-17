@@ -1,11 +1,12 @@
 .banner {
-  max-height: 223px;
-  min-height: 100px;
+  min-height: 111px;
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
   border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5em;
 }
 
 .hero {
@@ -13,9 +14,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: darken;
+  background-position: center;
 }
 
 .hero_about {
+  min-height: 223px;
   background: rgba(0, 0, 0, 0.3) url(../assets/hero_about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,6 +34,12 @@
 .banner h1 .br {
   display: none;
 }
+
+/* @media screen and (max-width: 1441px) {
+  .banner {
+    max-width: unset;
+  }
+} */
 
 @media screen and (max-width: 980px) {
   .banner h1 {

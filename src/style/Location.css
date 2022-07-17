@@ -1,5 +1,4 @@
 .locations {
-  width: 100%;
   padding: 2em 4em;
   display: flex;
   flex-direction: column;
@@ -15,9 +14,16 @@
   max-width: 1240px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.informations {
-  width: 50%;
+
+.informations_1 {
+  width: 80%;
+}
+
+.informations_1 h1 {
+  font-weight: 500;
+  width: 80%;
 }
 
 .informations_1 ul {
@@ -26,12 +32,14 @@
 }
 
 .informations_2 {
+  width: 20%;
   text-align: right;
 }
 
 .host {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 1.5em;
 }
 
@@ -48,9 +56,65 @@
   justify-content: flex-end;
 }
 
+.rating li {
+  display: flex;
+  align-items: center;
+}
+.rating li img {
+  margin: auto;
+}
 .dropdown_container {
   width: 100%;
   max-width: 1240px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 980px) {
+  .locations {
+    padding: 2em;
+  }
+
+  .carrousel {
+    border-radius: 10px;
+  }
+
+  .carrousel_arrow {
+    width: 20px;
+  }
+
+  .informations {
+    width: 100%;
+  }
+
+  .informations_1 h1 {
+    font-size: 1.5rem;
+  }
+
+  .informations_2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .host {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .locations {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .informations_1 h1 {
+    font-size: 1.3rem;
+  }
+
+  .rating li img {
+    width: 80%;
+  }
 }

@@ -50,7 +50,9 @@ function Location({ locations }) {
               <div className="informations_container">
                 <div className="informations informations_1">
                   <h1>{el.title}</h1>
-                  <p>{el.location}</p>
+                  <p>
+                    {el.location.split("-")[1]}, {el.location.split("-")[0]}
+                  </p>
                   <ul>
                     {el.tags &&
                       el.tags.map((el, idx) => <Tag key={idx} el={el} />)}

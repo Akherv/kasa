@@ -1,10 +1,12 @@
 .navbar {
+  max-width: 1240px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 2em 4em;
   font-size: 1.2rem;
+  margin: auto;
 }
 
 .navbar img {
@@ -51,5 +53,11 @@
   }
   .links li:nth-child(2) {
     margin-left: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1441px) {
+  .navbar {
+    max-width: 100%;
   }
 }

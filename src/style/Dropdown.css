@@ -15,9 +15,7 @@
   position: relative;
   border-radius: 10px;
   z-index: 2;
-}
-
-.arrow {
+  font-weight: 500;
 }
 
 .arrow.active {
@@ -32,13 +30,19 @@
   transition: 0.3s ease-in;
   position: relative;
   top: -5px;
-  /* display: flex;
-  flex-direction: column; */
+  border-radius: 5px;
 }
 
 .dropdown_content.active {
   display: block;
-  /* min-height: 250px; */
   opacity: 1;
   transform: translateY(0px);
+}
+
+@media screen and (max-width: 980px) {
+  .dropdown,
+  .dropdown.large {
+    width: 100%;
+    margin: 1em 0;
+  }
 }
