@@ -4,6 +4,7 @@
 }
 .dropdown.large {
   width: 80%;
+  max-width: 1000px;
 }
 .dropdown_button {
   padding: 1em;

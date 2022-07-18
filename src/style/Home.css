@@ -1,9 +1,9 @@
 .home {
-  padding: 2em 4em;
+  padding: 0 4em 2em;
 }
 
 .board {
-  max-width: calc(1240px - 2em);
+  max-width: calc(1240px - 4em);
   margin: 2em auto;
   padding: 2em;
   border-radius: 25px;
@@ -18,21 +18,15 @@
   width: 100%;
 }
 
-@media screen and (max-width: 1441px) {
-  .board {
-    max-width: unset;
-  }
-}
-
 @media screen and (max-width: 980px) {
   .home {
-    padding: 2em;
+    padding: 0 2em 2em;
   }
 }
 
 @media screen and (max-width: 768px) {
   .home {
-    padding: 1em;
+    padding: 0 1em 1em;
   }
 
   .board {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import starRate from "../assets/star_rate.svg";
 import starRateActive from "../assets/star_rate_active.svg";
@@ -10,34 +10,34 @@ import "../style/Location.css";
 function Location({ locations }) {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  //handle error route for locations/:id if :id doesn't exist in the DB
   useEffect(() => {
-    if (!locations.some((el) => el.id.includes(id))) {
+    if (!locations.some((el) => el.id === id)) {
       navigate("/notfound", { replace: true });
     }
   }, [locations, id, navigate]);
 
-  const searchId = locations.some((el) => el.id.includes(id));
-  if (!searchId) return null;
-
+  //function to render the starNumber figure with img starRateActive and if they are under 5 complete with gray star until they reach 5
   const renderStar = (starNumber) => {
-    let arr = [];
+    let arrLi = [];
     for (let i = 0; i < starNumber; i++) {
-      arr.push(
+      arrLi.push(
         <li key={i}>
           <img src={starRateActive} alt={`${starNumber} star`} />
         </li>
       );
     }
-    if (arr.length < 5) {
+    if (arrLi.length < 5) {
       for (let i = starNumber; i < 5; i++) {
-        arr.push(
+        arrLi.push(
           <li key={i}>
             <img src={starRate} alt={`${starNumber} star`} />
           </li>
         );
       }
     }
-    return arr;
+    return arrLi;
   };
   return (
     <>

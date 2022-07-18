@@ -1,5 +1,5 @@
 .locations {
-  padding: 2em 4em;
+  padding: 0 4em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +41,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-top: 1.5em;
+  margin-left: 1em;
 }
 
 .host img {
@@ -62,6 +63,7 @@
 }
 .rating li img {
   margin: auto;
+  width: 100%;
 }
 .dropdown_container {
   width: 100%;
@@ -73,7 +75,7 @@
 
 @media screen and (max-width: 980px) {
   .locations {
-    padding: 2em;
+    padding: 0 2em 2em;
   }
 
   .carrousel {
@@ -101,11 +103,14 @@
   .host {
     margin-top: 0;
   }
+  .rating {
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .locations {
-    padding: 1em;
+    padding: 0 1em 1em;
   }
 }
 
@@ -114,7 +119,12 @@
     font-size: 1.3rem;
   }
 
-  .rating li img {
-    width: 80%;
+  .rating li {
+    width: 15%;
+  }
+
+  .host img {
+    width: 50px;
+    height: 50px;
   }
 }

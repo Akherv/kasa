@@ -35,12 +35,6 @@
   display: none;
 }
 
-/* @media screen and (max-width: 1441px) {
-  .banner {
-    max-width: unset;
-  }
-} */
-
 @media screen and (max-width: 980px) {
   .banner h1 {
     font-size: 1.8rem;

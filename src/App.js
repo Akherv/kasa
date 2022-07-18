@@ -19,6 +19,9 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home locations={locations} />} />
+          <Route path="/home" element={<Home locations={locations} />} />
+          <Route path="/accueil" element={<Home locations={locations} />} />
+          <Route path="/about" element={<About />} />
           <Route path="/a_propos" element={<About />} />
           <Route
             path="/locations/:id"

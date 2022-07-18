@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2em 4em;
+  padding: 2em 4em 1em;
   font-size: 1.2rem;
   margin: auto;
 }
@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 980px) {
   .navbar {
-    padding: 2em;
+    padding: 2em 2em 1em;
   }
 }
 
