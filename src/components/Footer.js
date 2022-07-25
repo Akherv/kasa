@@ -5,7 +5,7 @@ import "../style/Footer.css";
 function Footer() {
   const { pathname } = useLocation();
   //to remove for styling purpose the footer if we are on 404 page
-  const regex = /\/locations|\/$|\/a_propos/;
+  const regex = /\/locations|\/$|\/home|\/accueil|\/a_propos|\/about/;
   if (!pathname.match(regex)) return null;
 
   return (
