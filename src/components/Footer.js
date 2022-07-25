@@ -9,14 +9,12 @@ function Footer() {
   if (!pathname.match(regex)) return null;
 
   return (
-    <>
-      <nav className="footer">
-        <Link to="/">
-          <img src={logo} alt="logo Kasa" />
-        </Link>
-        <p>&#169;&nbsp;2020 Kasa. All rights reserved</p>
-      </nav>
-    </>
+    <nav className="footer">
+      <Link to="/">
+        <img src={logo} alt="logo Kasa" />
+      </Link>
+      <p>&#169;&nbsp;2020 Kasa. All rights reserved</p>
+    </nav>
   );
 }
 export default Footer;

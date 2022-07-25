@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import starRate from "../assets/star_rate.svg";
 import starRateActive from "../assets/star_rate_active.svg";
