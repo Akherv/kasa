@@ -19,7 +19,7 @@ $ git clone https://github.com/Akherv/kasa.git
 Allez au repo cloné :
 
 ```
-$ cd Kasa
+$ cd kasa
 ```
 
 Installez les packages yarn (décrits dans `package.json`) :
