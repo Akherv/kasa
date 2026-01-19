@@ -22,16 +22,16 @@ Allez au repo cloné :
 $ cd kasa
 ```
 
-Installez les packages yarn (décrits dans `package.json`) :
+Installez les packages npm (décrits dans `package.json`) :
 
 ```
-$ yarn install
+$ npm install
 ```
 
 Lancez l'application :
 
 ```
-$ yarn start
+$ vite
 ```
 
-Puis allez à l'adresse : `http://localhost:3000`
+Puis allez à l'adresse : `http://localhost:5173/`
