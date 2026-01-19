@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Akherv.github.io/Kasa",
+  "homepage": "https://akherv.github.io/kasa",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
